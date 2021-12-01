@@ -1,0 +1,13 @@
+C:\Users\Дмитрий\Documents\нет\ClinicService\BLL\bin\Debug\netcoreapp3.1\BLL.deps.json
+C:\Users\Дмитрий\Documents\нет\ClinicService\BLL\bin\Debug\netcoreapp3.1\BLL.dll
+C:\Users\Дмитрий\Documents\нет\ClinicService\BLL\bin\Debug\netcoreapp3.1\BLL.pdb
+C:\Users\Дмитрий\Documents\нет\ClinicService\BLL\bin\Debug\netcoreapp3.1\Domain.dll
+C:\Users\Дмитрий\Documents\нет\ClinicService\BLL\bin\Debug\netcoreapp3.1\Domain.pdb
+C:\Users\Дмитрий\Documents\нет\ClinicService\BLL\obj\Debug\netcoreapp3.1\BLL.csproj.AssemblyReference.cache
+C:\Users\Дмитрий\Documents\нет\ClinicService\BLL\obj\Debug\netcoreapp3.1\BLL.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Дмитрий\Documents\нет\ClinicService\BLL\obj\Debug\netcoreapp3.1\BLL.AssemblyInfoInputs.cache
+C:\Users\Дмитрий\Documents\нет\ClinicService\BLL\obj\Debug\netcoreapp3.1\BLL.AssemblyInfo.cs
+C:\Users\Дмитрий\Documents\нет\ClinicService\BLL\obj\Debug\netcoreapp3.1\BLL.csproj.CoreCompileInputs.cache
+C:\Users\Дмитрий\Documents\нет\ClinicService\BLL\obj\Debug\netcoreapp3.1\BLL.csproj.CopyComplete
+C:\Users\Дмитрий\Documents\нет\ClinicService\BLL\obj\Debug\netcoreapp3.1\BLL.dll
+C:\Users\Дмитрий\Documents\нет\ClinicService\BLL\obj\Debug\netcoreapp3.1\BLL.pdb
