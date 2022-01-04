@@ -9,6 +9,8 @@ namespace BLL.Interfaces
 {
     public interface IDoctorService
     {
+        public Task Doctor(Doctor doctor);
+
         public Task AddDoctor(Doctor doctor);
 
         public Task<ICollection<Doctor>> GetAllDoctors();

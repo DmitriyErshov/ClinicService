@@ -18,6 +18,10 @@ namespace BLL.Services
             _repository = repository;
         }
 
+        public Task Doctor(Doctor doctor)
+        {
+            return _repository.CreateAsync(doctor);
+        }
 
         public Task AddDoctor(Doctor doctor)
         {

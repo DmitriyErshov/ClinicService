@@ -9,12 +9,15 @@ using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
 namespace DAL.Mappers
 {
-    class SpecializationConfiguration : IEntityTypeConfiguration<Specialization>
+    public class AppointmentConfiguration : IEntityTypeConfiguration<Appointment>
     {
-        public void Configure(EntityTypeBuilder<Specialization> builder)
+        public void Configure(EntityTypeBuilder<Appointment> builder)
         {
             builder.HasKey(c => c.Id);
-            builder.Property(c => c.Name).HasMaxLength(200);
+            //builder.Property(c => c.Name).HasMaxLength(200);
+
+            //сделать многие ко многим
+            builder.HasMany(e => e.Procedures);
         }
     }
 }

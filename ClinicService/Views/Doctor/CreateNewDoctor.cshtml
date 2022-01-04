@@ -4,21 +4,31 @@
     
 }
 
-<form>
+<form asp-action="CreateDoctor">
     <div>
         <label asp-for="@Model.FirstName">Имя</label>
         <input asp-for="@Model.FirstName" />
     </div>
     <div>
-        <label asp-for="@Model.LastName">Имя</label>
-        <input asp-for="@Model.LastName" />
+        <label asp-for="@Model.SecondName">Фамилия</label>
+        <input asp-for="@Model.SecondName" />
     </div>
     <div>
-        <label asp-for="@Model.PassportNumber">Имя</label>
+        <label asp-for="@Model.PassportNumber">номер паспорта</label>
         <input asp-for="@Model.PassportNumber" />
     </div>
-    <div>
-        <label asp-for="@Model.Specialization">Имя</label>
+    @*<div>
+        <label asp-for="@Model.Specialization">Специализация</label>
         <input asp-for="@Model.Specialization" />
+    </div>*@
+    <div>
+        <label asp-for="@Model.Specialization">Специализация</label>
+        @Html.DropDownList("Specializations", @ViewBag.Specializations as List<SelectListItem>, "Select smth", new { @class = "form-control" })
     </div>
+    <div>
+        <select id="ddlFruits" name="FruitId" asp-items="Specializations">
+            <option value="0">Please select</option>
+        </select>
+    </div>
+    <input type="submit" />
 </form>
