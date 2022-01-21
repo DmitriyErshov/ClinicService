@@ -1,0 +1,34 @@
+﻿@model Domain.Entities.Doctor
+@{
+    ViewBag.Title = "Редактирование пользователя";
+}
+
+<form asp-action="UpdateDoctor" asp-controller="Doctor" asp-route-id="@Model.Id">
+    <h3>Добавить доктора</h3>
+    <div>
+        <label asp-for="@Model.FirstName">Имя</label>
+        <input asp-for="@Model.FirstName" />
+    </div>
+    <div>
+        <label asp-for="@Model.LastName">Фамилия</label>
+        <input asp-for="@Model.LastName" />
+    </div>
+    <div>
+        <label asp-for="@Model.PassportNumber">номер паспорта</label>
+        <input asp-for="@Model.PassportNumber" />
+    </div>
+    <div>
+        <label asp-for="@Model.Birthday">дата рождения</label>
+        <input asp-for="@Model.Birthday" type="date" />
+    </div>
+    <div>
+        <label asp-for="@Model.Birthday">дата начала профессиональной деятельности</label>
+        <input asp-for="@Model.Birthday" type="date" />
+    </div>
+    <div>
+        <select asp-for="@Model.Specialization.Id" asp-items=@ViewBag.Specializations>
+            <option value="0">Please select</option>
+        </select>
+    </div>
+    <input type="submit" />
+</form>

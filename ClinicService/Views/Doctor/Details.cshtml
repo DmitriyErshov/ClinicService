@@ -1,0 +1,17 @@
+﻿@model Domain.Entities.Doctor
+@{
+    ViewBag.Title = Model.FirstName;
+}
+<h2>Доктор @Model.FirstName</h2>
+<div>
+    <dl class="dl-horizontal">
+        <dt>Идентификатор</dt>
+        <dd>@Model.Id</dd>
+
+        <dt>Спец</dt>
+        <dd>@Model.Specialization.Name</dd>
+
+        <dt>Дата рождения</dt>
+        <dd>@Model.Birthday</dd>
+    </dl>
+</div>

@@ -34,10 +34,12 @@ namespace ClinicService
             var connString = Configuration.GetConnectionString("ClinicContext");
             services.AddDbContext<ClinicContext>(ops => ops.UseMySQL(connString));
 
-            services.AddScoped<IRepository<Doctor>, Repository<Doctor>>();
+            services.AddScoped<IRepository<Doctor>, DoctorRepository>();
+            services.AddScoped<IRepository<Specialization>, Repository<Specialization>>();
             //добавить другие репозитории
 
             services.AddScoped<IDoctorService, DoctorService>();
+            services.AddScoped<ISpecializationService, SpecializationService>();
             //добавить другие репозитории
         }
 
@@ -65,7 +67,7 @@ namespace ClinicService
             {
                 endpoints.MapControllerRoute(
                     name: "default",
-                    pattern: "{controller=Doctor}/{action=CreateNewDoctor}/{id?}");
+                    pattern: "{controller=Doctor}/{action=GetAllDoctors}/{id?}");
             });
         }
     }

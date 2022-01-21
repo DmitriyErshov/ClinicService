@@ -1,0 +1,24 @@
+﻿@model ICollection<Domain.Entities.Doctor>
+@{
+    ViewData["Title"] = "Доктора";
+}
+
+<br/>
+<a asp-action="CreateDoctor">Добавить доктора</a>
+<br/>
+@foreach (var item in Model)
+{
+<div class="container" style="border-radius: 5px;">
+    <div class="row" style="background-color:#effdff; border-radius:3px;">
+        <div class="col-3">@item.FirstName</div>
+        <div class="col-6">@item.LastName</div>
+        <div class="col-9">@item.Specialization.Name</div>
+    </div>
+    <td>
+        <a asp-action="Details" asp-controller="Doctor" asp-route-id="@item.Id">Подробнее</a> |
+        <a asp-action="UpdateDoctor" asp-controller="Doctor" asp-route-id="@item.Id">Изменить</a> |
+        <a asp-action="Delete" asp-controller="Doctor" asp-route-id="@item.Id">Удалить</a>
+    </td>
+</div>
+    <br/>
+}

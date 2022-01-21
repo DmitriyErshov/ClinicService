@@ -11,7 +11,8 @@ namespace BLL.Services
 {
     public class DoctorService : IDoctorService
     {
-        private IRepository<Doctor> _repository;
+       private IRepository<Doctor> _repository;
+       // private DoctorRepository<Doctor> _repository;
 
         public DoctorService(IRepository<Doctor> repository)
         {

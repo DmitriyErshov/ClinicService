@@ -2,21 +2,21 @@
 using Domain.Entities;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
-using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Threading.Tasks;
+using System.Linq;
 
 namespace ClinicService.Controllers
 {
     public class DoctorController : Controller
     {
-        private readonly IDoctorService _service;
+        private readonly IDoctorService _doctorService;
+        private readonly ISpecializationService _specializationService;
 
-
-        public DoctorController(IDoctorService service)
+        public DoctorController(IDoctorService doctorService, ISpecializationService specializationService)
         {
-            _service = service;
+            _doctorService = doctorService;
+            _specializationService = specializationService;
         }
 
         public IActionResult Index()
@@ -25,23 +25,62 @@ namespace ClinicService.Controllers
         }
 
         [HttpGet]
-        public IActionResult CreateNewDoctor()
+        public IActionResult CreateDoctor()
         {
-            List<Specialization> ListDepartments = new List<Specialization>()
-            {
-                new Specialization() {Id = 1, Name="Терапевт" },
-                new Specialization() {Id = 2, Name="Стоматолог" },
-                new Specialization() {Id = 3, Name="Кардиолог" },
-            };
-            ViewBag.Specializations = new SelectList(ListDepartments, "Id", "Name");
+            ViewBag.Specializations = new SelectList(_specializationService.GetAllSpecializations().Result, "Id", "Name");
+            
             return View();
         }
 
         [HttpPost]
         public async Task<IActionResult> CreateDoctor([FromForm] Doctor doctor)
         {
+            Specialization temp = await _specializationService.GetSpecializationById(doctor.Specialization.Id);
+            doctor.Specialization = temp;
 
-            await _service.Doctor(doctor);
+            await _doctorService.Doctor(doctor);
+            return Redirect("/Home/Index");
+        }
+
+        [HttpGet]
+        public IActionResult GetAllDoctors()
+        {
+            var doctors = _doctorService.GetAllDoctors().Result;
+            return View(doctors);
+        }
+
+        [HttpGet]
+        public async Task<IActionResult> Details(int? id)
+        {
+            if (id != null)
+            {
+                Doctor doctor = await _doctorService.GetDoctorById((int)id);
+                if (doctor != null)
+                    return View(doctor);
+            }
+            return NotFound();
+        }
+
+        [HttpGet]
+        public async Task<IActionResult> UpdateDoctor(int? id)
+        {
+            if (id != null)
+            {
+                ViewBag.Specializations = new SelectList(_specializationService.GetAllSpecializations().Result, "Id", "Name");
+                Doctor doctor = await _doctorService.GetDoctorById((int)id);
+                if (doctor != null)
+                    return View(doctor);
+            }
+            return NotFound();
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> UpdateDoctor([FromForm] Doctor doctor)
+        {
+            Specialization temp = await _specializationService.GetSpecializationById(doctor.Specialization.Id);
+            doctor.Specialization = temp;
+
+            await _doctorService.UpdateDoctor(doctor);
             return Redirect("/Home/Index");
         }
     }
