@@ -36,10 +36,18 @@ namespace ClinicService
 
             services.AddScoped<IRepository<Doctor>, DoctorRepository>();
             services.AddScoped<IRepository<Specialization>, Repository<Specialization>>();
+            services.AddScoped<IRepository<Appointment>, AppointmentRepository>();
+            services.AddScoped<IRepository<Patient>, Repository<Patient>>();
+            services.AddScoped<IRepository<AppointmentStatus>, Repository<AppointmentStatus>>();
+            services.AddScoped<IRepository<Procedure>, Repository<Procedure>>();
             //добавить другие репозитории
 
             services.AddScoped<IDoctorService, DoctorService>();
+            services.AddScoped<IPatientService, PatientService>();
             services.AddScoped<ISpecializationService, SpecializationService>();
+            services.AddScoped<IAppointmentService, AppointmentService>();
+            services.AddScoped<IProcedureService, ProcedureService>();
+
             //добавить другие репозитории
         }
 

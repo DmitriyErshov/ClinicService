@@ -19,5 +19,8 @@ namespace BLL.Interfaces
 
         public Task<Appointment> DeleteAppointment(int appointmentId);
         public Task UpdateAppointment(Appointment appointment);
+
+        public Task<AppointmentStatus> GetAppointmentStatusById(int appointmentStatusId);
+
     }
 }

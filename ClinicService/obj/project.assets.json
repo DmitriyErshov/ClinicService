@@ -2309,6 +2309,7 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v3.1",
         "dependencies": {
+          "DAL": "1.0.0",
           "Domain": "1.0.0"
         },
         "compile": {

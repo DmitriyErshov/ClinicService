@@ -1,0 +1,18 @@
+﻿@model Domain.Entities.Procedure
+
+@{
+    ViewBag.Title = "Добавление процедуры";
+}
+
+<form asp-action="CreateProcedure">
+    <h3>Добавить процедуру</h3>
+    <div>
+        <label asp-for="@Model.Name">Название</label>
+        <input asp-for="@Model.Name" />
+    </div>
+    <div>
+        <label asp-for="@Model.Price">Цена</label>
+        <input asp-for="@Model.Price" />
+    </div>
+    <input type="submit" />
+</form>

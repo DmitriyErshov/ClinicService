@@ -28,6 +28,9 @@
           "netcoreapp3.1": {
             "targetAlias": "netcoreapp3.1",
             "projectReferences": {
+              "C:\\Users\\Дмитрий\\Documents\\нет\\ClinicService\\DAL\\DAL.csproj": {
+                "projectPath": "C:\\Users\\Дмитрий\\Documents\\нет\\ClinicService\\DAL\\DAL.csproj"
+              },
               "C:\\Users\\Дмитрий\\Documents\\нет\\ClinicService\\Domain\\Domain.csproj": {
                 "projectPath": "C:\\Users\\Дмитрий\\Documents\\нет\\ClinicService\\Domain\\Domain.csproj"
               }

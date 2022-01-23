@@ -11,3 +11,8 @@ C:\Users\Дмитрий\Documents\нет\ClinicService\BLL\obj\Debug\netcoreapp3
 C:\Users\Дмитрий\Documents\нет\ClinicService\BLL\obj\Debug\netcoreapp3.1\BLL.csproj.CopyComplete
 C:\Users\Дмитрий\Documents\нет\ClinicService\BLL\obj\Debug\netcoreapp3.1\BLL.dll
 C:\Users\Дмитрий\Documents\нет\ClinicService\BLL\obj\Debug\netcoreapp3.1\BLL.pdb
+C:\Users\Дмитрий\Documents\нет\ClinicService\BLL\bin\Debug\netcoreapp3.1\BLL.runtimeconfig.json
+C:\Users\Дмитрий\Documents\нет\ClinicService\BLL\bin\Debug\netcoreapp3.1\BLL.runtimeconfig.dev.json
+C:\Users\Дмитрий\Documents\нет\ClinicService\BLL\bin\Debug\netcoreapp3.1\DAL.dll
+C:\Users\Дмитрий\Documents\нет\ClinicService\BLL\bin\Debug\netcoreapp3.1\DAL.pdb
+C:\Users\Дмитрий\Documents\нет\ClinicService\BLL\obj\Debug\netcoreapp3.1\BLL.genruntimeconfig.cache

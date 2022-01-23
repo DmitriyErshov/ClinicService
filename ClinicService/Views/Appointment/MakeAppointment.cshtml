@@ -1,0 +1,25 @@
+﻿@model Domain.Entities.Appointment
+
+@{
+    ViewBag.Title = "Запись на приём";
+}
+
+@Model.Doctor.FirstName @Model.Doctor.SecondName @Model.Doctor.LastName
+
+<form asp-action="MakeAppointment">
+    <h3>Добавить приём</h3>
+    <div>
+        <label asp-for="@Model.Doctor.Id">Доктор id</label>
+        <input asp-for="@Model.Doctor.Id" type="text" />
+    </div>
+    <div>
+        <label asp-for="@Model.Date">Дата</label>
+        <input asp-for="@Model.Date" type="datetime" />
+    </div>
+    <div>
+        <select asp-for="@Model.Patient.Id" asp-items=@ViewBag.Patients>
+            <option value="0">Please select</option>
+        </select>
+    </div>
+    <input type="submit" />
+</form>

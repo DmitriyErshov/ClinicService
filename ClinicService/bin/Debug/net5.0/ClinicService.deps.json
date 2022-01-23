@@ -1953,6 +1953,7 @@
       },
       "BLL/1.0.0": {
         "dependencies": {
+          "DAL": "1.0.0",
           "Domain": "1.0.0"
         },
         "runtime": {

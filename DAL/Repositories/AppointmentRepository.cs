@@ -10,7 +10,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace DAL.Repositories
 {
-    class AppointmentRepository : Repository<Appointment>
+    public class AppointmentRepository : Repository<Appointment>
     {
         public AppointmentRepository(ClinicContext context) : base(context)
         {

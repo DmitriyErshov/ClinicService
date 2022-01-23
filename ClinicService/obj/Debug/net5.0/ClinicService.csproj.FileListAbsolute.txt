@@ -150,3 +150,16 @@ C:\Users\Дмитрий\Documents\нет\ClinicService\ClinicService\obj\Debug\n
 C:\Users\Дмитрий\Documents\нет\ClinicService\ClinicService\obj\Debug\net5.0\Razor\Views\Doctor\CreateDoctor.cshtml.g.cs
 C:\Users\Дмитрий\Documents\нет\ClinicService\ClinicService\obj\Debug\net5.0\Razor\Views\Doctor\Details.cshtml.g.cs
 C:\Users\Дмитрий\Documents\нет\ClinicService\ClinicService\obj\Debug\net5.0\Razor\Views\Doctor\UpdateDoctor.cshtml.g.cs
+C:\Users\Дмитрий\Documents\нет\ClinicService\ClinicService\obj\Debug\net5.0\Razor\Views\Doctor\Delete.cshtml.g.cs
+C:\Users\Дмитрий\Documents\нет\ClinicService\ClinicService\obj\Debug\net5.0\Razor\Views\Patient\CreatePatient.cshtml.g.cs
+C:\Users\Дмитрий\Documents\нет\ClinicService\ClinicService\obj\Debug\net5.0\Razor\Views\Patient\Delete.cshtml.g.cs
+C:\Users\Дмитрий\Documents\нет\ClinicService\ClinicService\obj\Debug\net5.0\Razor\Views\Patient\Details.cshtml.g.cs
+C:\Users\Дмитрий\Documents\нет\ClinicService\ClinicService\obj\Debug\net5.0\Razor\Views\Patient\GetAllPatients.cshtml.g.cs
+C:\Users\Дмитрий\Documents\нет\ClinicService\ClinicService\obj\Debug\net5.0\Razor\Views\Patient\UpdatePatient.cshtml.g.cs
+C:\Users\Дмитрий\Documents\нет\ClinicService\ClinicService\obj\Debug\net5.0\Razor\Views\Appointment\MakeAppointment.cshtml.g.cs
+C:\Users\Дмитрий\Documents\нет\ClinicService\ClinicService\obj\Debug\net5.0\Razor\Views\Appointment\GetAllAppointment.cshtml.g.cs
+C:\Users\Дмитрий\Documents\нет\ClinicService\ClinicService\obj\Debug\net5.0\Razor\Views\Procedure\CreateProcedure.cshtml.g.cs
+C:\Users\Дмитрий\Documents\нет\ClinicService\ClinicService\obj\Debug\net5.0\Razor\Views\Procedure\Details.cshtml.g.cs
+C:\Users\Дмитрий\Documents\нет\ClinicService\ClinicService\obj\Debug\net5.0\Razor\Views\Procedure\GetAllProcedures.cshtml.g.cs
+C:\Users\Дмитрий\Documents\нет\ClinicService\ClinicService\obj\Debug\net5.0\Razor\Views\Procedure\Delete.cshtml.g.cs
+C:\Users\Дмитрий\Documents\нет\ClinicService\ClinicService\obj\Debug\net5.0\Razor\Views\Procedure\Update.cshtml.g.cs

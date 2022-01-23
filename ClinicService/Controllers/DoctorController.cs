@@ -75,13 +75,42 @@ namespace ClinicService.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> UpdateDoctor([FromForm] Doctor doctor)
+        public async Task<IActionResult> UpdateDoctor(Doctor doctor)
         {
             Specialization temp = await _specializationService.GetSpecializationById(doctor.Specialization.Id);
             doctor.Specialization = temp;
 
             await _doctorService.UpdateDoctor(doctor);
             return Redirect("/Home/Index");
+        }
+
+
+        [HttpGet]
+        [ActionName("Delete")]
+        public async Task<IActionResult> ConfirmDelete(int? id)
+        {
+            if (id != null)
+            {
+                Doctor doctor = await _doctorService.GetDoctorById((int)id);
+                if (doctor != null)
+                    return View(doctor);
+            }
+            return NotFound();
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> Delete(int? id)
+        {
+            if (id != null)
+            {
+                Doctor doctor = await _doctorService.GetDoctorById((int)id);
+                if (doctor != null)
+                {
+                    await _doctorService.DeleteDoctor((int)id);
+                    return Redirect("/Home/Index");
+                }
+            }
+            return NotFound();
         }
     }
 }
