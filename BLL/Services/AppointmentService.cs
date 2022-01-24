@@ -43,7 +43,6 @@ namespace BLL.Services
         {
             return _repository.GetByIdAsync(appointmentId);
         }
-
         
 
         public Task UpdateAppointment(Appointment appointment)

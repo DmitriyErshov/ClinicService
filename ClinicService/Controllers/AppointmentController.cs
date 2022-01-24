@@ -15,15 +15,18 @@ namespace ClinicService.Controllers
         private readonly IDoctorService _doctorService;
         private readonly IPatientService _patientService;
         private readonly IAppointmentService _appointmentService;
+        private readonly IProcedureService _procedureService;
 
 
         public AppointmentController(IDoctorService doctorService, 
                                     IPatientService patientService,
-                                    IAppointmentService appointmentService)
+                                    IAppointmentService appointmentService,
+                                    IProcedureService procedureService)
         {
             _doctorService = doctorService;
             _patientService = patientService;
             _appointmentService = appointmentService;
+            _procedureService = procedureService;
         }
         public IActionResult Index()
         {
@@ -55,6 +58,7 @@ namespace ClinicService.Controllers
             appointment.Doctor = await _doctorService.GetDoctorById(appointment.Doctor.Id);
             appointment.Patient = await _patientService.GetlPatientById(appointment.Patient.Id);
             appointment.Status = await _appointmentService.GetAppointmentStatusById(1);
+            appointment.Procedures.Add(await _procedureService.GetlProcedureById(4));
 
             await _appointmentService.AddAppointment(appointment);
             return Redirect("/Home/Index");
@@ -70,8 +74,20 @@ namespace ClinicService.Controllers
         [HttpGet]
         public IActionResult GetDoctorAppointments(int? id)
         {
-            //var appointment = _appointmentService.GetAppointmentByFilter(Appointment app  => ).Result;
-            return View(appointment);
+            var appointment = _appointmentService.GetAppointmentByFilter((Appointment x) => x.Doctor.Id == id).Result;
+            return View("GetAllAppointment", appointment);
+        }
+
+        [HttpGet]
+        public async Task<IActionResult> Details(int? id)
+        {
+            if (id != null)
+            {
+                Appointment appointment = await _appointmentService.GetAppointmentById((int)id);
+                if (appointment != null)
+                    return View(appointment);
+            }
+            return NotFound();
         }
     }
 }

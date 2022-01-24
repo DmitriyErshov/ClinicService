@@ -22,7 +22,8 @@ namespace DAL.Repositories
             return await Context.Appointments
                 .Include(e => e.Doctor).ThenInclude(e => e.Specialization)
                 .Include(e => e.Patient)
-                .Include(e => e.Status).ToListAsync();
+                .Include(e => e.Status)
+                .Include(e => e.Procedures).ToListAsync();
         }
 
         public override async Task<ICollection<Appointment>> GetByFilterAsync(Expression<Func<Appointment, bool>> expression)
@@ -39,6 +40,7 @@ namespace DAL.Repositories
                 .Include(e => e.Doctor).ThenInclude(e => e.Specialization)
                 .Include(e => e.Patient)
                 .Include(e => e.Status)
+                .Include(e => e.Procedures)
                 .FirstOrDefaultAsync(e => e.Id == id);
         }
     }

@@ -163,3 +163,4 @@ C:\Users\Дмитрий\Documents\нет\ClinicService\ClinicService\obj\Debug\n
 C:\Users\Дмитрий\Documents\нет\ClinicService\ClinicService\obj\Debug\net5.0\Razor\Views\Procedure\GetAllProcedures.cshtml.g.cs
 C:\Users\Дмитрий\Documents\нет\ClinicService\ClinicService\obj\Debug\net5.0\Razor\Views\Procedure\Delete.cshtml.g.cs
 C:\Users\Дмитрий\Documents\нет\ClinicService\ClinicService\obj\Debug\net5.0\Razor\Views\Procedure\Update.cshtml.g.cs
+C:\Users\Дмитрий\Documents\нет\ClinicService\ClinicService\obj\Debug\net5.0\Razor\Views\Appointment\Details.cshtml.g.cs
